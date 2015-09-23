@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="DomainModel" namespace="DomainModel.Entities" >
+  <class name="ProductPrice">
+    <id name="ID" column="ProductPrice_id">
+      <generator class="identity"></generator>
+    </id>
+    <property name="ProductId" column="Product_id"></property>
+    <property name="Price"/>
+    <property name="EffectiveDate"></property>
+  </class>
+</hibernate-mapping>

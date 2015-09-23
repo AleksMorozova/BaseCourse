@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="DomainModel" namespace="DomainModel.Entities">
+  <class name="Product" table="Product">
+    <id name="Id" column="Product_id">
+      <generator class="identity"></generator>
+    </id>
+    <property name="Name" column="ProductName"></property>
+    <property name="Units"/>
+    <bag name="Prices" table="ProductPrice" cascade="all-delete-orphan">
+      <key column="Product_Id" ></key>
+      <one-to-many class="ProductPrice"/>
+    </bag>
+  </class>
+</hibernate-mapping>

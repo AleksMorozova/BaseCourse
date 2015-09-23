@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <!-- <object id="UserDAL" type="DAL.Concrete.MockData.MockUserDAL, DAL" singleton="true"></object>
+  <object id="OrderDAL" type="DAL.Concrete.MockData.MockOrderDAL, DAL" singleton="true"></object>
+  <object id="OrderItemDAL" type="DAL.Concrete.MockData.MockOrderItemDAL, DAL" singleton="true"></object>-->
+  <object id="UserDAL" type="DAL.Concrete.AdoNet.ANUserDAL, DAL" singleton="true"></object>
+  <object id="OrderDAL" type="DAL.Concrete.AdoNet.ANOrderDAL, DAL" singleton="true"></object>
+  <object id="OrderItemDAL" type="DAL.Concrete.AdoNet.ANOrderItemDAL, DAL" singleton="true"></object>
+  <object id="ProductDAL" type="DAL.Concrete.MockData.MockProductDAL, DAL" singleton="true"></object>  
+</objects>

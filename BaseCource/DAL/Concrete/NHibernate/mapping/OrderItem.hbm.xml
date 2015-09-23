@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="DomainModel" namespace="DomainModel.Entities">
+  <class name="OrderItem">
+    <id name="Id" column="OrderItem_id">
+      <generator class="identity"></generator>
+    </id>
+    <property name="Count" column="Quantity"></property>
+    <property name="Order_Id"></property>
+    <property name="Product_Id"></property>
+    <one-to-one name ="Product" class="Product" foreign-key="Product_Id"/>
+  </class>
+</hibernate-mapping>  

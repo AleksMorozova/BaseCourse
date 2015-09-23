@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="DomainModel" namespace="DomainModel.Entities">
+  <class name="Order" table="[Order]">
+    <id name="Id" column="Order_Id">
+      <generator class="identity"></generator>
+    </id>
+    <property name="PlacingDate" column="PlacingDate"></property>
+    <list name="Items" table="OrderItem" cascade="all-delete-orphan">
+      <key column="Order_id"></key>
+      <index column="OrderItem_id"></index>
+      <one-to-many class="OrderItem"/>
+    </list>
+    <property type="NHibernate.Type.EnumStringType`1[[DomainModel.Entities.Status, DomainModel]], NHibernate " name="Status"/>
+    <property name="Users_Id" column="Users_id"></property>
+  </class>
+</hibernate-mapping>  
